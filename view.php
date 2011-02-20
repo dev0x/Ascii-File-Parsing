@@ -38,6 +38,12 @@
 		var row = $(this).parent().parent().children().index($(this).parent());
 		alert('Row: ' + row + ', Column: ' + col);
 	    });
+	    $('.buttonShow').click(function(){
+		    $(".validation").show();
+ 	    });
+	    $('.buttonHide').click(function(){
+		$(".validation").hide();
+	    });
         });                               
     </script>
 
@@ -47,11 +53,20 @@
 <ul>
 	<li>Click the icon on the column of data that you want to copy it to the clipboard</li>
 	<li>Paste the contents of the clipboard to spreadsheet</li>
+	<li><input type="button" value="Show Validation Data" class="buttonShow"/></li>
+	<li><input type="button" value="Hide Validation Data" class="buttonHide"/></li>
 </ul>
 <div class="demo">
 <table id="fileTable" class="yui-grid">
 <thead>
-	<tr> <th>label <img src="_assets/img/page_white_copy.png" alt="copy to clipboard" title="Copy to Clipboard" /></th>
+	<tr>
+		<th>sample label<img src="_assets/img/page_white_copy.png" alt="copy to clipboard" title="Copy to Clipboard" /></th>
+		<th class="validation" style="display:none">SA</th>
+		<th class="validation" style="display:none">ST</th>
+		<th class="validation" style="display:none">SA 2[V]</th>
+		<th class="validation" style="display:none">ST 2[V]</th>
+		<th class="validation" style="display:none">SA 3[V]</th>
+		<th class="validation" style="display:none">ST 3[V]</th>
 		<th>last column <img src="_assets/img/page_white_copy.png" alt="copy to clipboard" title="Copy to Clipboard" /></th>
 	</tr>
 
